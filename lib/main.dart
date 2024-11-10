@@ -36,7 +36,32 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               height: 350,
               width: 350,
               child: Image.asset("assets/character-1.png")
-            )
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width -88,
+              height: 80,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(40),
+                color: Colors.white.withOpacity(0.2),
+              ),
+              child: Stack(
+              children: [
+                Container(
+                  height: 80,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.white.withOpacity(0.9)
+                  ),
+                  child: Icon(Icons.arrow_right, size: 44,),
+                ),
+                Align(
+                  child: Center(child: Text("Let's Started", style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),)),
+                )
+              ],
+                
+              ),
+            ),
           ],
         ),
 
